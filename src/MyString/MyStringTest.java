@@ -7,15 +7,18 @@ package MyString;
 public class MyStringTest {
     public static void main(String[] args) {
 
-        MyString str = new MyString(new char[] {'A','B','C', 'Z'});
-        MyString str2 = new MyString(new char[] {'A','B','C', 'Z'});
+        MyString str = new MyString(new char[] {'A','B','C', 'Z', 'a', 'b', 'a', 'a', 'b', ' ', ' ', ' ', 'c'});
+        MyString str2 = new MyString(new char[] {'a'});
         str.printMyString();
-        str.lower();
-        str.printMyString();
-        str.uper();
+        str2.printMyString();
+
+        System.out.println(str.findSubstring(str2));
         str.printMyString();
 
-        str2.concat(str);
-        str2.printMyString();
+        str.cutSubstring(str2);
+        str.printMyString();
+
+        str.deleteSpace();
+        str.printMyString();
     }
 }
